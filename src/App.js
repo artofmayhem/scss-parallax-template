@@ -1,4 +1,5 @@
 import AppBar from "@material-ui/core/AppBar";
+import zIndex from "@material-ui/core/styles/zIndex";
 import "./App.scss";
 
 function App() {
@@ -40,9 +41,10 @@ function App() {
                     display: 'flex',
                     paddingTop: '145vh',
                     margin: '0 auto',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    zIndex: '-1'
                 }}>
-                    <h1 style={{padding: '0 18.5vw', fontSize: '10vh',}}>SONVR DESIGN</h1>
+                    <h1 style={{margin: '0 auto', fontSize: '3rem'}}>SONVR DESIGN</h1>
                 </div>
             </div>
             <div className={"parallax-wrapper"}>
