@@ -189,8 +189,9 @@ body {
     top: 0;
     left: 0;
     box-shadow: 0 0 5rem #FF00C8;
-    background-image: url("/assets/streetOne.jpg");
-    background-size: cover;
+    background-image: url("/assets/face.jpg");
+    opacity: 0.6;
+    background-size: 50;
     background-position: center center;
     position: absolute;
     z-index: -1;
@@ -202,7 +203,7 @@ body {
     height: 100vh;
     padding-top: 20vh;
     background-color: indigo;
-    // background-image: url("/assets/streetThree.jpg");
+    // background-image: url("/assets/street.jpg");
     background-size: cover;
     background-position: center center;
     z-index: 2;
