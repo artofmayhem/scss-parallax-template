@@ -5,8 +5,11 @@ html {
 body {
   margin: 0;
   font-size: 2rem;
-  font-family: "Arial Narrow", "Franklin Gothic Book", Arial, sans-serif;
-  background-color: indigo;
+  font-family: "Idlewild A", "Idlewild B";
+  font-style: normal;
+  font-weight: 200;
+  background-color: black;
+  //background: radial-gradient(farthest-corner at 30vw 20vh, #7397A1 1%, #3F2C41 100%);
   color: white;
   height: 100vh;
   perspective: 1px;
@@ -18,181 +21,272 @@ body {
 .wrapper {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(farthest-corner at 30vw 20vh, #7397A1 1%, #3F2C41 100%);
+  //background: radial-gradient(farthest-corner at 30vw 20vh, #7397A1 1%, #3F2C41 100%);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
- //$s1:'';
- //$s2:'';
- //$s3:'';
- //@for $i from 1 to 400 {
- //  $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
- //  $s2: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
- //  $s3: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
- //  @if $i < 400 {
- //    $s1: $s1 + ",";
- //    $s2: $s2 + ",";
- //    $s3: $s3 + ",";
- //
- //  }
- //}
- //
- //.snow {
- //  border-radius: 50%;
- //  opacity: 0.8;
- //}
- //
- //.layer1 {
- //  width: 1.5rem;
- //  height: 1.5rem;
- //  filter: blur(1.5px);
- //  box-shadow: #{$s1};
- //  animation-duration: 6s;
- //}
- //
- //.layer1.a {
- //  animation-delay: -3s;
- //}
- //
- //.layer2 {
- //  width: 1.2rem;
- //  height: 1.2rem;
- //  filter: blur(3px);
- //  box-shadow: #{$s2};
- //  animation-duration: 8s;
- //}
- //
- //.layer2.a {
- //  animation-delay: -4s;
- //}
- //
- //.layer3 {
- //  width: 0.8rem;
- //  height: 0.8rem;
- //  filter: blur(6px);
- //  box-shadow: #{$s3};
- //  animation-duration: 10s;
- //}
- //
- //.layer3.a {
- //  animation-delay: -5s;
- //}
-
-.parallax-wrapper {
-  width: 100vw;
-  height: 100vh;
-  margin-top: 100vh;
-  padding-top: 20vh;
-  box-sizing: border-box;
-  transform-style: preserve-3d;
-}
-
-.parallax-wrapper::before {
-  content: '';
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-image: url("/assets/streetOne.jpg");
-  background-size: cover;
-  background-position: center center;
+.frame {
+  width: 70vw;
+  height: 50vh;
   position: absolute;
-  z-index: -1;
-  transform:translateZ(-1px) scale(2)
+  border-radius: 50px;
+  border: 5px lightblue solid;
+  box-shadow:
+  0 0 1.5rem #00CCFF,
+  inset 0 0 1.5rem #00CCFF,
+  0 0 60px #FF00C8,
+  inset 0 0 60px #FF00C8;
+
 }
 
-.regular-wrapper {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
-  background-color: indigo;
-  // background-image: url("/assets/streetThree.jpg");
-  background-size: cover;
-  background-position: center center;
-  z-index: 2;
-  position: relative;
+.frame:nth-child(1){
+  transform:  translateY(0) translateZ(0);
+  opacity: 1.00;
 }
 
-.parallax-wrapper2 {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
-  box-sizing: border-box;
-  transform-style: preserve-3d;
+.frame:nth-child(2){
+    transform:  translateY(1px) translateZ(-0.1px);
+    opacity: 0.95;
+  }
+
+.frame:nth-child(3){
+  transform:  translateY(2px) translateZ(-0.2px);
+  opacity: 0.9;
 }
 
-.parallax-wrapper2::before {
-  content: '';
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-image: url("/assets/streetTwo.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
-  z-index: -1;
-  transform:translateZ(-1px) scale(2)
+.frame:nth-child(4){
+  transform:  translateY(3px) translateZ(-0.3px);
+  opacity: 0.85;
 }
 
-.regular-wrapper2 {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
- //background-image: url("/assets/streetFour.jpg");
- background-color: black;
-  background-size: cover;
-  background-position: center center;
-  z-index: 2;
-  position: relative;
-}
-
-.parallax-wrapper3 {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
-  box-sizing: border-box;
-  transform-style: preserve-3d;
-}
-
-.parallax-wrapper3::before {
-  content: '';
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-image: url("/assets/streetThree.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
-  z-index: -1;
-  transform:translateZ(-1px) scale(2)
-}
-
-.regular-wrapper3 {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
- //background-image: url("/assets/streetFour.jpg");
- background-color: #ff007F;
-  background-size: cover;
-  background-position: center center;
-  z-index: 2;
-  position: relative;
-}
-
-.content {
-  margin: 0 auto;
-  padding: 25vh 0;
-  width: 100vw;
-  background: #222;
+.frame:nth-child(5){
+  transform:  translateY(4px) translateZ(-0.4px);
   opacity: 0.8;
-  text-align: center;
 }
 
-@keyframes fall {
-  100% {transform: translateY(200vh);}
+.frame:nth-child(6){
+  transform:  translateY(5px) translateZ(-0.5px);
+  opacity: 0.75;
 }
+
+.frame:nth-child(7){
+  transform: translateY(6px) translateZ(-0.6px);
+  opacity: 0.7;
+}
+
+.frame:nth-child(8){
+  transform: translateY(7px) translateZ(-0.7px);
+  opacity: 0.65;
+}
+
+.frame:nth-child(9){
+  transform: translateY(8px) translateZ(-0.8px);
+  opacity: 0.6;
+}
+
+.frame:nth-child(10){
+  transform: translateY(9px) translateZ(-0.9px);
+  opacity: 0.55;
+}
+
+.frame:nth-child(11){
+  transform: translateY(10px) translateZ(-1px);
+  opacity: 0.4;
+}
+
+.frame:nth-child(12){
+  transform: translateY(11px) translateZ(-1.1px);
+  opacity: 0.3;
+}
+
+.frame:nth-child(13){
+  transform: translateY(12px) translateZ(-1.2px);
+  opacity: 0.2;
+}
+
+.frame:nth-child(14){
+  transform: translateY(13px) translateZ(-1.3px);
+  opacity: 0.1;
+}
+
+.frame:nth-child(15){
+  transform: translateY(14px) translateZ(-1.4px);
+  opacity: 0.05;
+}
+
+  //$s1:'';
+  //$s2:'';
+  //$s3:'';
+  //@for $i from 1 to 400 {
+  //  $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
+  //  $s2: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
+  //  $s3: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
+  //  @if $i < 400 {
+  //    $s1: $s1 + ",";
+  //    $s2: $s2 + ",";
+  //    $s3: $s3 + ",";
+  //
+  //  }
+  //}
+  //
+  //.snow {
+  //  border-radius: 50%;
+  //  opacity: 0.8;
+  //}
+  //
+  //.layer1 {
+  //  width: 1.5rem;
+  //  height: 1.5rem;
+  //  filter: blur(1.5px);
+  //  box-shadow: #{$s1};
+  //  animation-duration: 6s;
+  //}
+  //
+  //.layer1.a {
+  //  animation-delay: -3s;
+  //}
+  //
+  //.layer2 {
+  //  width: 1.2rem;
+  //  height: 1.2rem;
+  //  filter: blur(3px);
+  //  box-shadow: #{$s2};
+  //  animation-duration: 8s;
+  //}
+  //
+  //.layer2.a {
+  //  animation-delay: -4s;
+  //}
+  //
+  //.layer3 {
+  //  width: 0.8rem;
+  //  height: 0.8rem;
+  //  filter: blur(6px);
+  //  box-shadow: #{$s3};
+  //  animation-duration: 10s;
+  //}
+  //
+  //.layer3.a {
+  //  animation-delay: -5s;
+  //}
+
+  .parallax-wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+  }
+
+  .parallax-wrapper::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5rem #FF00C8;
+    background-image: url("/assets/streetOne.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2)
+  }
+
+  .regular-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    background-color: indigo;
+    // background-image: url("/assets/streetThree.jpg");
+    background-size: cover;
+    background-position: center center;
+    z-index: 2;
+    position: relative;
+  }
+
+  .parallax-wrapper2 {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+  }
+
+  .parallax-wrapper2::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url("/assets/streetTwo.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2)
+  }
+
+  .regular-wrapper2 {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    //background-image: url("/assets/streetFour.jpg");
+    background-color: black;
+    background-size: cover;
+    background-position: center center;
+    z-index: 2;
+    position: relative;
+  }
+
+  .parallax-wrapper3 {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+  }
+
+  .parallax-wrapper3::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url("/assets/streetThree.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2)
+  }
+
+  .regular-wrapper3 {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    //background-image: url("/assets/streetFour.jpg");
+    background-color: #ff007F;
+    background-size: cover;
+    background-position: center center;
+    z-index: 2;
+    position: relative;
+  }
+
+  .content {
+    margin: 0 auto;
+    padding: 25vh 0;
+    width: 100vw;
+    background: #222;
+    opacity: 0.8;
+    text-align: center;
+  }
+
+
+  @keyframes fall {
+    100% {transform: translateY(200vh);}
+  }
