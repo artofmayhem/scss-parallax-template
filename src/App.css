@@ -19,8 +19,11 @@ body {
   width: 100vw;
   height: 100vh;
   background: radial-gradient(farthest-corner at 30vw 20vh, #7397A1 1%, #3F2C41 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .parallax-wrapper {
   width: 100vw;
@@ -136,5 +139,3 @@ body {
     transform: translateY(200vh);
   }
 }
-
-/*# sourceMappingURL=App.css.map */

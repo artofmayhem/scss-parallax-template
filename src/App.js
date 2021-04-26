@@ -11,13 +11,13 @@ function App() {
         <h1>Parallax-scss-template</h1>
       </AppBar>
       <div className={"wrapper"}>
-        {/* <div className={"snow layer1 a"}></div>
-        <div className={"snow layer1"}></div>
-        <div className={"snow layer2 a"}></div>
-        <div className={"snow layer2"}></div>
-        <div className={"snow layer3 a"}></div>
-        <div className={"snow layer3"}></div> */}
-        
+        {/*<div className={"snow layer1 a"}></div>*/}
+        {/*<div className={"snow layer1"}></div>*/}
+        {/*<div className={"snow layer2 a"}></div>*/}
+        {/*<div className={"snow layer2"}></div>*/}
+        {/*<div className={"snow layer3 a"}></div>*/}
+        {/*<div className={"snow layer3"}></div>*/}
+          <div className={'frame'}></div>
       </div>
       <div className={"parallax-wrapper"}>
         <div className={"content"}>
