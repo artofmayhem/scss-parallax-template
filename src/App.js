@@ -1,5 +1,4 @@
 import AppBar from "@material-ui/core/AppBar";
-import zIndex from "@material-ui/core/styles/zIndex";
 import "./App.scss";
 
 function App() {
