@@ -1,0 +1,194 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Arial Narrow", "Franklin Gothic Book", Arial, sans-serif;
+  background-color: indigo;
+  color: white;
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(farthest-corner at 30vw 20vh, #7397A1 1%, #3F2C41 100%);
+}
+
+// $s1:'';
+// $s2:'';
+// $s3:'';
+// @for $i from 1 to 400 {
+//   $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
+//   $s2: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
+//   $s3: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + " " + #FFF;
+//   @if $i < 400 {
+//     $s1: $s1 + ",";
+//     $s2: $s2 + ",";
+//     $s3: $s3 + ",";
+    
+//   }
+// }
+
+// .snow {
+//   border-radius: 50%;
+//   opacity: 0.8;
+// }
+
+// .layer1 {
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   filter: blur(1.5px);
+//   box-shadow: #{$s1};
+//   animation-duration: 6s;
+// }
+
+// .layer1.a {
+//   animation-delay: -3s;
+// }
+
+// .layer2 {
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   filter: blur(3px);
+//   box-shadow: #{$s2};
+//   animation-duration: 8s;
+// }
+
+// .layer2.a {
+//   animation-delay: -4s;
+// }
+
+// .layer3 {
+//   width: 0.8rem;
+//   height: 0.8rem;
+//   filter: blur(6px);
+//   box-shadow: #{$s3};
+//   animation-duration: 10s;
+// }
+
+// .layer3.a {
+//   animation-delay: -5s;
+// }
+
+.parallax-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100vh;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("/assets/streetOne.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  z-index: -1;
+  transform:translateZ(-1px) scale(2)
+}
+
+.regular-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  background-color: indigo;
+  // background-image: url("/assets/streetThree.jpg");
+  background-size: cover;
+  background-position: center center;
+  z-index: 2;
+  position: relative;
+}
+
+.parallax-wrapper2 {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.parallax-wrapper2::before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("/assets/streetTwo.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  z-index: -1;
+  transform:translateZ(-1px) scale(2)
+}
+
+.regular-wrapper2 {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+ //background-image: url("/assets/streetFour.jpg");
+ background-color: black;
+  background-size: cover;
+  background-position: center center;
+  z-index: 2;
+  position: relative;
+}
+
+.parallax-wrapper3 {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.parallax-wrapper3::before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("/assets/streetThree.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  z-index: -1;
+  transform:translateZ(-1px) scale(2)
+}
+
+.regular-wrapper3 {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+ //background-image: url("/assets/streetFour.jpg");
+ background-color: #ff007F;
+  background-size: cover;
+  background-position: center center;
+  z-index: 2;
+  position: relative;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 25vh 0;
+  width: 100vw;
+  background: #222;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@keyframes fall {
+  100% {transform: translateY(200vh);}
+}
