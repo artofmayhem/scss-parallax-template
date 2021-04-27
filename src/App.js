@@ -8,7 +8,7 @@ function App() {
                 color={"inherit"}
                 style={{backgroundColor: "#222", color: "white", boxShadow: '0 0 2rem #FF00C8', textAlign: 'center'}}
             >
-                <h4 style={{padding: '3vh 0'}}>Parallax-scss-template With Recursive 3D header</h4>
+                <h4 style={{padding: '3vh 0'}}>Parallax Template 3D header</h4>
             </AppBar>
             <div className={"wrapper"}>
                 {/*<div className={"snow layer1 a"}></div>*/}
